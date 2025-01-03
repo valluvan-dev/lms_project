@@ -40,3 +40,7 @@ def create_staff_account(request):
     else:
         user_form = UserForm()
     return render(request, 'create_account.html', {'form': user_form, 'account_type': 'Staff'})
+
+
+def success(request):
+    return render(request, 'success.html')

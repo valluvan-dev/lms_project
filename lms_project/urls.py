@@ -20,8 +20,14 @@ from accounts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', views.login_view, name='login'),
     path('create-student/', views.create_student_account, name='create_student'),
     path('create-trainer/', views.create_trainer_account, name='create_trainer'),
     path('create-staff/', views.create_staff_account, name='create_staff'),
     path('success/', views.success, name='success'),
+    path('student-dashboard/', views.student_dashboard, name='student_dashboard'),
+    path('trainer-dashboard/', views.trainer_dashboard, name='trainer_dashboard'),
+    path('staff-dashboard/', views.staff_dashboard, name='staff_dashboard'),
 ]
+
+

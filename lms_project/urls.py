@@ -28,6 +28,12 @@ urlpatterns = [
     path('student-dashboard/', views.student_dashboard, name='student_dashboard'),
     path('trainer-dashboard/', views.trainer_dashboard, name='trainer_dashboard'),
     path('staff-dashboard/', views.staff_dashboard, name='staff_dashboard'),
+    path('admin-panel/', views.admin_panel, name='admin_panel'),
+    path('manage-users/', views.manage_users, name='manage_users'),
+    path('create-user/<str:role>/', views.create_user, name='create_user'),
+    path('update-user/<int:user_id>/', views.update_user, name='update_user'),
+    path('delete-user/<int:user_id>/', views.delete_user, name='delete_user'),
+    path('restrict-user/<int:user_id>/', views.restrict_user, name='restrict_user'),
 ]
 
 

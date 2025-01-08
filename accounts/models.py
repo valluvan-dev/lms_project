@@ -45,3 +45,8 @@ class Staff(models.Model):
                 new_id = 1
             self.staff_id = f'BTS{new_id:02d}'
         super().save(*args, **kwargs)
+
+
+class Admin(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    is_superadmin = models.BooleanField(default=False)  # True for SuperAdmin

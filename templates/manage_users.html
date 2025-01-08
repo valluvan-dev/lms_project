@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Manage Users</h1>
+<a href="{% url 'create_user' 'student' %}">Add Student</a>
+<a href="{% url 'create_user' 'trainer' %}">Add Trainer</a>
+<a href="{% url 'create_user' 'staff' %}">Add Staff</a>
+<h2>Students</h2>
+<ul>
+    {% for student in students %}
+        <li>{{ student.user.username }} - 
+            <a href="{% url 'update_user' student.user.id %}">Edit</a> | 
+            <a href="{% url 'delete_user' student.user.id %}">Delete</a> | 
+            <a href="{% url 'restrict_user' student.user.id %}">Restrict</a>
+        </li>
+    {% endfor %}
+</ul>
+<h2>Trainers</h2>
+<ul>
+    {% for trainer in trainers %}
+        <li>{{ trainer.user.username }} - 
+            <a href="{% url 'update_user' trainer.user.id %}">Edit</a> | 
+            <a href="{% url 'delete_user' trainer.user.id %}">Delete</a> | 
+            <a href="{% url 'restrict_user' trainer.user.id %}">Restrict</a>
+        </li>
+    {% endfor %}
+</ul>
+<h2>Staff</h2>
+<ul>
+    {% for staff in staff %}
+        <li>{{ staff.user.username }} - 
+            <a href="{% url 'update_user' staff.user.id %}">Edit</a> | 
+            <a href="{% url 'delete_user' staff.user.id %}">Delete</a> | 
+            <a href="{% url 'restrict_user' staff.user.id %}">Restrict</a>
+        </li>
+    {% endfor %}
+</ul>
+
+    
+</body>
+</html>

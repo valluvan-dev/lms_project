@@ -47,7 +47,7 @@
 
 
 
-from django.shortcuts import render, redirect,get_object_or_404                                                                                                                                                                                                            ]
+# from django.shortcuts import render, redirect,get_object_or_404                                                                                                                                                                                                            ]
 from django.contrib.auth import login
 from .forms import UserForm, StudentForm, TrainerForm, StaffForm
 from .models import Student, Trainer, Staff
